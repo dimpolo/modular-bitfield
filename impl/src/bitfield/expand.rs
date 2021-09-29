@@ -85,6 +85,7 @@ impl BitfieldStruct {
                 }
 
                 #[inline]
+                #[allow(clippy::unnecessary_cast)]
                 fn from_bytes(
                     bytes: Self::Bytes,
                 ) -> ::core::result::Result<Self::InOut, ::modular_bitfield::error::InvalidBitPattern<Self::Bytes>>
